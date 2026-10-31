@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Курс — конвертер валют</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<header><a class="brand" href="./">↗ курс<span>.</span></a><span class="header-note">Меньше расчётов. Больше ясности.</span></header>
+<main>
+  <div class="intro"><p class="eyebrow">ДЕНЬГИ БЕЗ ГРАНИЦ</p><h1>Одна сумма.<br><span>Любая валюта.</span></h1><p>Узнайте, сколько стоят ваши деньги<br>в другой валюте — за пару секунд.</p></div>
+  <section class="converter" aria-label="Конвертер валют">
+    <div class="card-top"><h2>Обменный курс</h2><span class="badge">СПРАВОЧНО</span></div>
+    <label for="amount">Сумма</label><input id="amount" inputmode="decimal" value="100" autocomplete="off" aria-describedby="status">
+    <div class="currencies"><div><label for="from">Из валюты</label><select id="from"></select></div><button id="swap" class="swap" aria-label="Поменять валюты местами">⇄</button><div><label for="to">В валюту</label><select id="to"></select></div></div>
+    <div class="result-box"><span class="result-label">ВЫ ПОЛУЧИТЕ</span><output id="result" aria-live="polite">—</output><p id="rate">Загружаем курс…</p></div>
+    <p id="status" role="status">Подключаемся к источнику курсов…</p>
+    <button id="refresh" class="refresh">Обновить курсы <span>↗</span></button>
+    <details><summary>Ввести курс вручную</summary><label for="manual">Сколько единиц второй валюты за 1 единицу первой</label><input id="manual" inputmode="decimal" placeholder="Например, 95,50"><button id="apply" class="refresh">Применить свой курс</button></details>
+  </section>
+</main>
+<footer><span>Для путешествий, покупок и планов.</span><span>Курсы: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer">ExchangeRate-API</a> · Обновление раз в сутки</span></footer>
+<script type="module" src="./app.js"></script>
+</body></html>
